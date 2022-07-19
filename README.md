@@ -1,5 +1,5 @@
 =============================<br>
-$~~~~~~~~~~~~~~~~~~~~$ With Coffee<br>
+With Coffee<br>
 =============================<br>
 感谢游玩WithCoffee！
 这是一个为ManaMetalMod提供了咖啡店相关的食物与咖啡的模组，与FoodPlus进行联动！<br>
