@@ -43,19 +43,7 @@ public class FoodItems extends ItemFood {
     public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player) {
         super.onEaten(itemstack, world, player);
 
-        /*
-        if (!player.capabilities.isCreativeMode) {
-            --itemstack.stackSize;
-            if(itemstack.stackSize > 0) {
-                player.inventory.addItemStackToInventory(new ItemStack(this.returnItem));
-            }
-        }
-
-        return itemstack.stackSize <= 0 ? new ItemStack(this.returnItem) : itemstack;
-       */
-        --itemstack.stackSize;
-        if (itemstack.stackSize > 0)
-        	player.inventory.addItemStackToInventory(new ItemStack(this.returnItem));
+        player.inventory.addItemStackToInventory(new ItemStack(this.returnItem));
         return itemstack.stackSize <= 0 ? new ItemStack(this.returnItem) : itemstack;
     }
 

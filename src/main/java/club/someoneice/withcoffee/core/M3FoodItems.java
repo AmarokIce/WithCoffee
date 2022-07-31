@@ -19,9 +19,6 @@ public class M3FoodItems extends FoodItems {
         this.M3Effect = effects;
         this.time = time;
 
-        // this.setCreativeTab(WithCoffee.Pineapple);
-
-        // GameRegistry.registerItem(this, name, WithCoffee.MODID);
     }
 
     public M3FoodItems(String name, int hunger, float staturation, PotionM3[] effects, Item returnItem) {

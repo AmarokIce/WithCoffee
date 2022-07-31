@@ -1,4 +1,4 @@
-package club.someoneice.withcoffee.missingno.sandman;
+package club.someoneice.withcoffee.util.missingno.sandman;
 
 import club.someoneice.withcoffee.WithCoffee;
 import cpw.mods.fml.common.registry.GameRegistry;

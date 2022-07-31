@@ -1,4 +1,4 @@
-package club.someoneice.withcoffee.util;
+package club.someoneice.withcoffee.util.item;
 
 import club.someoneice.withcoffee.WithCoffee;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -13,7 +13,7 @@ public class Milk extends ItemFood {
 
     private Item setItem;
 
-    public Milk(String name, int food, float saturation, Item returnItem, int setMaxStackSize, EnumAction DrinkItem) {
+    public Milk(String name, int food, float saturation, Item returnItem, int setMaxStackSize) {
 
         super(food, saturation, false);
 
@@ -31,22 +31,17 @@ public class Milk extends ItemFood {
     }
 
     @Override
-    public int getMaxItemUseDuration(ItemStack stack) {
-        return 32;
-    }
+    public int getMaxItemUseDuration(ItemStack stack) { return 32;}
+
+
+    @Override
+    public EnumAction getItemUseAction(ItemStack itemStack) { return EnumAction.drink;}
 
     @Override
     public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player) {
-        if (!world.isRemote) {
-            player.curePotionEffects(itemstack);
-        }
+        if (!world.isRemote) player.curePotionEffects(itemstack);
 
-        if (!player.capabilities.isCreativeMode) {
-            --itemstack.stackSize;
-            if(itemstack.stackSize > 0) {
-                player.inventory.addItemStackToInventory(new ItemStack(this.setItem));
-            }
-        }
+        player.inventory.addItemStackToInventory(new ItemStack(this.setItem));
 
         return itemstack.stackSize <= 0 ? new ItemStack(this.setItem) : itemstack;
     }

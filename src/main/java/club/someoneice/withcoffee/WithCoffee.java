@@ -1,14 +1,16 @@
 package club.someoneice.withcoffee;
 
+import club.someoneice.withcoffee.util.event.PlayerLogInEvent;
 import club.someoneice.withcoffee.init.ItemList;
 import club.someoneice.withcoffee.init.Recipes;
-import club.someoneice.withcoffee.missingno.sandman.SandmanList;
+import club.someoneice.withcoffee.util.missingno.sandman.SandmanList;
 import club.someoneice.withcoffee.util.OreHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import org.apache.logging.log4j.LogManager;
 
@@ -32,6 +34,12 @@ public class WithCoffee {
         ItemList.init(); // Register Item here, it must be first to register.
         new OreHelper(); // Register OreDictionary here.
         new Recipes(); // Register Recipes here, and it must after to register with OreDictionary.
+
+        Logger.info("[With Coffee] >> Now loading events!");
+
+        new PlayerLogInEvent();
+        MinecraftForge.EVENT_BUS.register(new PlayerLogInEvent());
+
 
         if (PineappleConfig.DebugMode) {
             Logger.info("Now debug mode is running!");

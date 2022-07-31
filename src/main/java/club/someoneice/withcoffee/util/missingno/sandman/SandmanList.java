@@ -1,4 +1,4 @@
-package club.someoneice.withcoffee.missingno.sandman;
+package club.someoneice.withcoffee.util.missingno.sandman;
 import club.someoneice.withcoffee.core.FoodItems;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
@@ -11,12 +11,17 @@ public class SandmanList {
     public static Item foodTestDrink;
     public static Item toolHungerMaker;
 
+    public static Item toolMissingNo;
+
+
     public static Item foodFoodItemTest;
 
     public static void TestItemList() {
         foodTestFood = new SandFood("test_food", 2, 0.5f, false, EnumAction.eat);
         foodTestDrink = new SandFood("test_drink", 2, 0.5f, false, EnumAction.drink);
         toolHungerMaker = new SandFood("hunger_maker", -2, 0.5f, false, EnumAction.drink);
+
+        toolMissingNo = new MissingNo();
 
         foodFoodItemTest = new FoodItems("foodItem", 5, 0.5f, false, CuisineCore.itemCoffeeCup, EnumAction.eat);
 

@@ -1,11 +1,13 @@
 package club.someoneice.withcoffee.init;
 
+import club.someoneice.manamoon.item.ManaMoonLight;
 import club.someoneice.withcoffee.WithCoffee;
 import club.someoneice.withcoffee.core.M3FoodItems;
-import club.someoneice.withcoffee.missingno.sandman.Sandman;
+import club.someoneice.manamoon.item.MoonLightPowerGetter;
+import club.someoneice.withcoffee.util.missingno.sandman.Sandman;
 import club.someoneice.withcoffee.core.FoodItems;
 import club.someoneice.withcoffee.core.ItemItems;
-import club.someoneice.withcoffee.util.Milk;
+import club.someoneice.withcoffee.util.item.Milk;
 import com.foodplus.core.FoodPlusItems;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
@@ -24,6 +26,10 @@ public class ItemList {
 	public static Item itemCoffeeFlour;
 	public static Item itemDough;
 	public static Item itemBaguetteDough;
+
+	public static Item itemCornmeal;
+
+
 
 	// coffee
 	public static Item foodMocha;
@@ -88,6 +94,12 @@ public class ItemList {
 	public static Item foodStrawberryPreserves;
 	public static Item foodPineapplePreserves;
 
+	public static Item foodTortilla;
+	public static Item foodWrap;
+	public static Item foodLuckThursdayMuttonWrap;
+	public static Item foodMonteCristoSandwich;
+
+
 	/* FoodPlus Runtime Register */
 	//coffee
 	public static Item foodCoconetLatte;
@@ -99,13 +111,19 @@ public class ItemList {
 	public static Item foodBananaTea;
 
 	// food
-	public static Item foodBaconSandwich; // Use the Bread with Nutella to make.
+	public static Item foodBaconSandwich;
 
 	public static Item foodWalnutCroissant;
 	public static Item foodHotDogCroissant;
 
 	public static Item Brownie;
 	public static Item Trownie; // Just Chocolate.
+
+	public static Item foodBeefWrap;
+
+	/* ManaMoonLight register */
+	public static Item itemMoonGetter;
+	public static Item itemMoonPower;
 
 	public ItemList() { }
 
@@ -118,6 +136,11 @@ public class ItemList {
 		itemWoodenCap = new ItemItems("wooden_cap");
 		itemDough = new ItemItems("dough");
 		itemBaguetteDough = new ItemItems("baguette_dough");
+
+
+		// 2022.7.31
+
+
 
 		foodMocha = new M3FoodItems("mocha", 5, 0.5f, new PotionM3[]{PotionM3.potionCofe}, CuisineCore.itemCoffeeCup);
 		foodLatte = new M3FoodItems("latte", 6, 0.4f, new PotionM3[]{PotionM3.potionCofe}, CuisineCore.itemCoffeeCup);
@@ -156,7 +179,7 @@ public class ItemList {
 		foodSnowForestRanger = new M3FoodItems("forest_ranger", 8, 0.6f, new PotionM3[]{PotionM3.potionAlcohol}, 900, ItemList.itemWoodenCap);
 
 		foodHotCoco = new FoodItems("hot_coco", 8, 0.6f, false, CuisineCore.itemTeaCup, EnumAction.drink);
-		foodHoneyMilk = new Milk("honey_milk", 5, 0.5f, null, 64, EnumAction.drink);
+		foodHoneyMilk = new Milk("honey_milk", 5, 0.5f, null, 64);
 
 		foodCookedPineapple = new FoodItems("cooked_pineapple", 8, 0.5f);
 		foodHamSandwich = new FoodItems("han_sandwich", 10, 0.6f);
@@ -192,6 +215,11 @@ public class ItemList {
 			Brownie = new FoodItems("brownie", 6, 0.5f);
 			Trownie = new FoodItems("trownie", 6, 0.5f);
 
+			if(true) {
+				// TODO - Here is ManaMoonMode's item and now it code in WithCoffee. So here if(true).
+				itemMoonGetter = new MoonLightPowerGetter();
+				itemMoonPower = new ManaMoonLight();
+			}
 
 
 		} else {

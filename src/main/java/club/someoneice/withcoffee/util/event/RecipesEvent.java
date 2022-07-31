@@ -1,4 +1,4 @@
-package club.someoneice.withcoffee.event;
+package club.someoneice.withcoffee.util.event;
 
 import club.someoneice.withcoffee.init.ItemList;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

@@ -1,4 +1,4 @@
-package club.someoneice.withcoffee.missingno.recipes;
+package club.someoneice.withcoffee.util.missingno.recipes;
 
 /*
 import com.foodplus.core.FoodPlusItems;
