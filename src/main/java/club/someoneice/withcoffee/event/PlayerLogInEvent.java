@@ -1,4 +1,4 @@
-package club.someoneice.withcoffee.util.event;
+package club.someoneice.withcoffee.event;
 
 import club.someoneice.withcoffee.PineappleConfig;
 import club.someoneice.withcoffee.WithCoffee;

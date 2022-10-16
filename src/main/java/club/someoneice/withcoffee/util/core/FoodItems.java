@@ -1,4 +1,4 @@
-package club.someoneice.withcoffee.core;
+package club.someoneice.withcoffee.util.core;
 
 import club.someoneice.withcoffee.WithCoffee;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -16,18 +16,14 @@ public class FoodItems extends ItemFood {
 
     public FoodItems(String name, int food, float saturation, boolean wolfFood, Item returnItem, EnumAction action) {
         super(food, saturation, wolfFood);
-
         this.setUnlocalizedName(name);
         this.setTextureName(name);
-
-        // if (setAlwaysEdible)
         this.setAlwaysEdible();
+        this.setCreativeTab(WithCoffee.Pineapple);
+        this.setTextureName(WithCoffee.MODID + ":" +name);
 
         this.returnItem = returnItem;
         this.action = action;
-
-        this.setCreativeTab(WithCoffee.Pineapple);
-        this.setTextureName(WithCoffee.MODID + ":" +name);
 
         GameRegistry.registerItem(this, name, WithCoffee.MODID);
     }
@@ -46,5 +42,4 @@ public class FoodItems extends ItemFood {
         player.inventory.addItemStackToInventory(new ItemStack(this.returnItem));
         return itemstack.stackSize <= 0 ? new ItemStack(this.returnItem) : itemstack;
     }
-
 }

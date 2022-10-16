@@ -1,4 +1,4 @@
-package club.someoneice.withcoffee.util.event;
+package club.someoneice.withcoffee.event;
 
 import club.someoneice.withcoffee.init.ItemList;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -17,7 +17,6 @@ public class RecipesEvent{
         EntityPlayer player = event.player;
 
         if (item == ItemList.foodLegendCoffee) {
-            player.inventory.addItemStackToInventory(new ItemStack(CuisineCore.itemCoffeeCup));
             player.inventory.addItemStackToInventory(new ItemStack(CuisineCore.itemCoffeeCup));
         }
     }

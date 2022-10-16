@@ -1,4 +1,4 @@
-package club.someoneice.withcoffee.util.item;
+package club.someoneice.withcoffee.common;
 
 import club.someoneice.withcoffee.WithCoffee;
 import cpw.mods.fml.common.registry.GameRegistry;

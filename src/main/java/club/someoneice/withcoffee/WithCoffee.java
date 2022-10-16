@@ -1,9 +1,8 @@
 package club.someoneice.withcoffee;
 
-import club.someoneice.withcoffee.util.event.PlayerLogInEvent;
+import club.someoneice.withcoffee.event.PlayerLogInEvent;
 import club.someoneice.withcoffee.init.ItemList;
 import club.someoneice.withcoffee.init.Recipes;
-import club.someoneice.withcoffee.util.missingno.sandman.SandmanList;
 import club.someoneice.withcoffee.util.OreHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -14,15 +13,15 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import org.apache.logging.log4j.LogManager;
 
-@Mod(modid = WithCoffee.MODID, version = WithCoffee.VERSION, dependencies ="required-after:manametalmod@[6.2.0]; after:FoodPlus@[3.2rS]; after:FoodPlus")
+@Mod(modid = WithCoffee.MODID, version = WithCoffee.VERSION, dependencies ="required-after:manametalmod; after:FoodPlus")
 public class WithCoffee {
     public static final String MODID = "with_coffee";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.5";
     public static Configuration config;
     public static org.apache.logging.log4j.Logger Logger = LogManager.getLogger("with_coffee");
     public static final CreativeTabs Pineapple = new CreativeTabs("tab_pineapple"){
         public Item getTabIconItem() {
-            return ItemList.ItemIcon;
+            return ItemList.foodVanillaCoffee;
         }
     };
 
@@ -36,14 +35,10 @@ public class WithCoffee {
         new Recipes(); // Register Recipes here, and it must after to register with OreDictionary.
 
         Logger.info("[With Coffee] >> Now loading events!");
-
-        new PlayerLogInEvent();
         MinecraftForge.EVENT_BUS.register(new PlayerLogInEvent());
-
 
         if (PineappleConfig.DebugMode) {
             Logger.info("Now debug mode is running!");
-            SandmanList.TestItemList();
         }
     }
 
@@ -51,7 +46,7 @@ public class WithCoffee {
     public void PineappleEvent(FMLPreInitializationEvent event) {
         Logger = event.getModLog();
 
-        Logger.info("[With Coffee] >> Thank you for install With Coffee! Now loading FoodPlus...");
+        Logger.info("[With Coffee] >> Thank you for install WithCoffee! Now loading FoodPlus...");
         try {
             Class.forName("com.foodplus.core.FoodPlus");
             FoodPlusMod = true;

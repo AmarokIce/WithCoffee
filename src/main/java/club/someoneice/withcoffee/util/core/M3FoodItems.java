@@ -1,4 +1,4 @@
-package club.someoneice.withcoffee.core;
+package club.someoneice.withcoffee.util.core;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;

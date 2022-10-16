@@ -1,13 +1,10 @@
 package club.someoneice.withcoffee.init;
 
-import club.someoneice.manamoon.item.ManaMoonLight;
 import club.someoneice.withcoffee.WithCoffee;
-import club.someoneice.withcoffee.core.M3FoodItems;
-import club.someoneice.manamoon.item.MoonLightPowerGetter;
-import club.someoneice.withcoffee.util.missingno.sandman.Sandman;
-import club.someoneice.withcoffee.core.FoodItems;
-import club.someoneice.withcoffee.core.ItemItems;
-import club.someoneice.withcoffee.util.item.Milk;
+import club.someoneice.withcoffee.util.core.M3FoodItems;
+import club.someoneice.withcoffee.util.core.FoodItems;
+import club.someoneice.withcoffee.util.core.ItemItems;
+import club.someoneice.withcoffee.common.Milk;
 import com.foodplus.core.FoodPlusItems;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
@@ -15,8 +12,6 @@ import project.studio.manametalmod.potion.PotionM3;
 import project.studio.manametalmod.produce.cuisine.CuisineCore;
 
 public class ItemList {
-	public static Item ItemIcon = new Sandman("icon");
-
 	// coffee material
 	public static Item itemCoffeeSugar;
 	public static Item itemFermentedTea;
@@ -137,11 +132,6 @@ public class ItemList {
 		itemDough = new ItemItems("dough");
 		itemBaguetteDough = new ItemItems("baguette_dough");
 
-
-		// 2022.7.31
-
-
-
 		foodMocha = new M3FoodItems("mocha", 5, 0.5f, new PotionM3[]{PotionM3.potionCofe}, CuisineCore.itemCoffeeCup);
 		foodLatte = new M3FoodItems("latte", 6, 0.4f, new PotionM3[]{PotionM3.potionCofe}, CuisineCore.itemCoffeeCup);
 		foodMacchiato = new M3FoodItems("macchiato", 10, 0.25f, new PotionM3[]{PotionM3.potionCofe, PotionM3.potionHoney}, CuisineCore.itemCoffeeCup);
@@ -216,14 +206,17 @@ public class ItemList {
 			Trownie = new FoodItems("trownie", 6, 0.5f);
 
 			if(true) {
-				// TODO - Here is ManaMoonMode's item and now it code in WithCoffee. So here if(true).
-				itemMoonGetter = new MoonLightPowerGetter();
-				itemMoonPower = new ManaMoonLight();
+				// TODO - Here is MoonLightWithWolf's item and now it code in WithCoffee, but it still in working, so here 'if(true)' is a sandman.
+				sandman();
 			}
 
 
 		} else {
 			WithCoffee.Logger.info("[With Coffee] >> Now skin the FoodPlus foods register...");
 		}
+	}
+
+	public static void sandman() {
+		// Do Nothing.
 	}
 }
