@@ -1,0 +1,88 @@
+itemGroup.tab_pineapple=With Coffee
+
+item.wooden_cap.name=Wooden Cap
+item.coffee_flour.name=Coffee Flour
+item.milk_cream.name=Milk Cream
+item.baguette_dough.name=Baguette Dough
+item.coffee_sugar.name=Fine Sugar
+item.dough.name=Dough
+item.dry_tea_leaves.name=Dry Tea Leaves
+item.fermented_tea_leaves.name=Fermented Tea Leaves
+
+item.vanilla_coffee.name=Vanilla Coffee
+item.caramel_coffee.name=Caramel Coffee
+item.honey_vanilla_coffee.name=Honey Vanilla Coffee
+item.ender_coffee.name=Ender Coffee
+item.maple_coffee.name=Maple Coffee
+item.milk_coffee.name=Milk Coffee
+item.pineapple_coffee.name=Pineapple Coffee
+item.coconet_latte.name=Coconet Latte
+item.legend_coffee.name=Lengend Coffee
+item.mocha.name=Mocha
+item.egg_coffee.name=Egg Coffee(Latte)
+item.honey_coffee.name=Honey Coffee
+item.cookie_cream_coffee.name=Cookie with Cream Coffee
+item.pumk_coffee.name=Pumk-Coffee
+item.latte.name=Latte
+item.strawberry_coffee.name=Strawberry Coffee
+item.macchiato.name=Macchiato
+item.frost_coffee.name=Black Forest Coffee
+item.iced_coffee.name=Iced Coffee
+item.cookie_latte.name=Cookie Latte
+
+item.iced_tea.name=Iced Tea
+item.peach_tea.name=Peach Tea
+item.pineapple_tea.name=Pineapple Tea
+item.strawberry_tea.name=Strawberry Tea
+item.herd_tea.name=Someoneice's Tea
+item.dandelion_tea.name=Dandelion Tea
+item.legend_tea.name=Legend Tea
+item.caramel_milk_tea.name=Caramel Milk Tea
+item.white_tea.name=White Tea
+item.banana_tea.name=Banana Tea
+item.MintTea.name=Mint Tea
+item.milk_tea.name=Milk Tea
+item.maple_milk_tea.name=Maple Milk
+item.nutella_tea.name=Nuteall Tea
+item.red_tea.name=Red Tea
+item.sugar_tea.name=Instant Tea
+
+item.hot_coco.name=Hot Coco
+item.honey_milk.name=Honey Milk
+
+item.cooked_pineapple.name=Cooked Pineapple
+item.baguette.name=Baguette
+item.croissant.name=Croissant
+item.egg_croissant.name=Egg Croissant
+item.egg_club.name=Egg Club
+item.pineapple_croissant.name=Pineapple Croissant
+item.strawberry_croissant.name=Strawberry Croissant
+item.chicken_croissant.name=Chicken Croissant
+item.walnut_croissant.name=Walnut Croissant
+item.hot_dog_croissant.name=Hot Dog Croissant
+item.peach_preserves.name=Peach Preserves
+item.strawberry_preserves.name=Strawberry Preserves
+item.pineapple_preserves.name=Pineapple Preserves
+item.han_sandwich.name=Ham Sandwich
+item.bacon_sandwich.name=Bacon Sandwich
+item.cheese_sandwich.name=Cheese Sandwich
+item.ham_croissant.name=Ham Croissant
+item.caramel_croissant.name=Caramel Croissant
+item.honey_croissant.name=Honey Croissant
+
+item.forest_ranger.name=Snow Forest Ranger
+item.down_with_wolf.name=Drink Down with Wolf
+
+item.trownie.name=Trownie
+item.brownie.name=Brownie
+
+# Debug Item.
+item.foodItem.name=FoodItemTest
+item.test_food.name=Test Food
+item.test_drink.name=Test Drink
+item.hunger_maker.name=Hunger Maker
+
+hello.with_coffee.message=感謝遊玩 With Coffee！
+foodplus.with_coffee.message=已經檢查到FoodPlus，現在提供FoodPlus聯動食譜！
+no_foodplus.with_coffee.message=沒有檢查到FoodPlus，相關聯動食譜將會不可視！
+debug.with_coffee.message=DebugMod已經啟動！
