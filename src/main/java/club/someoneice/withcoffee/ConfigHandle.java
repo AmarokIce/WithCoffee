@@ -3,11 +3,11 @@ package club.someoneice.withcoffee;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 
-public class PineappleConfig {
+public class ConfigHandle {
 
     public static Boolean DebugMode = false;
 
-    public PineappleConfig() {
+    public ConfigHandle() {
         Configuration config = WithCoffee.config;
         config.load();
         config.addCustomCategoryComment("WithCoffee", "Welcome! There is the config for WithCoffee!");

@@ -1,11 +1,11 @@
-package club.someoneice.withcoffee.util.core;
+package club.someoneice.withcoffee.util.bean;
 
 import club.someoneice.withcoffee.WithCoffee;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
-import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
@@ -14,12 +14,11 @@ import net.minecraft.world.World;
 public class FoodItemsHelper extends ItemFood {
     // Pineapple? The PineapplePsychicParty! (?)
 
-    private int maxUseDuration;
-    private Item returnItem;
+    private final int maxUseDuration;
+    private final Item returnItem;
     private EnumAction enumAction;
 
     public FoodItemsHelper(String name, int food, float saturation, boolean wolfFood, boolean setAlwaysEdible, Item returnItem, int useDuration, int setMaxStackSize, EnumAction DrinkItem) {
-
         super(food, saturation, wolfFood);
 
         this.setUnlocalizedName(name);
@@ -31,7 +30,6 @@ public class FoodItemsHelper extends ItemFood {
         this.setMaxStackSize(setMaxStackSize);
         this.returnItem = returnItem;
         this.maxUseDuration = useDuration;
-        this.enumAction = enumAction;
 
         this.setCreativeTab(WithCoffee.Pineapple);
 
@@ -70,13 +68,14 @@ public class FoodItemsHelper extends ItemFood {
     }
 
     @Override
-    public EnumAction getItemUseAction(ItemStack itemStack) { return this.enumAction;}
+    public EnumAction getItemUseAction(ItemStack itemStack) {
+        return this.enumAction;
+    }
 
     @Override
     public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player) {
         super.onEaten(itemstack, world, player);
-
         player.inventory.addItemStackToInventory(new ItemStack(this.returnItem));
-        return itemstack.stackSize <= 0 ? new ItemStack(this.returnItem) : itemstack;
+        return itemstack;
     }
 }

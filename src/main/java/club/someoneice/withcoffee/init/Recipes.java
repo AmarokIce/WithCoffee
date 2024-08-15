@@ -1,8 +1,7 @@
 package club.someoneice.withcoffee.init;
 
-import com.foodplus.core.FoodPlusItems;
-
 import club.someoneice.withcoffee.WithCoffee;
+import com.foodplus.core.FoodPlusItems;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -20,20 +19,20 @@ import project.studio.manametalmod.produce.farming.FarmCore;
 public class Recipes {
     public Recipes() {
         /* Recipes. */
-        GameRegistry.addRecipe(new ItemStack(ItemList.itemWoodenCap, 1), new Object[]{"I I", "# #", "I#I", 'I', Items.iron_ingot, '#', Blocks.planks});
-        GameRegistry.addRecipe(new ItemStack(ItemList.itemBaguetteDough, 1), new Object[]{"I  ", " I ", "  I", 'I', ItemList.itemDough});
-        GameRegistry.addRecipe(new ItemStack(ItemList.itemBaguetteDough, 1), new Object[]{"  I", " I ", "I  ", 'I', ItemList.itemDough});
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.itemDough, 2), new Object[]{ "flour", "flour"}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodHamSandwich, 1), new Object[]{ ItemCraft3.Toast, ItemCraft3.Toast, ItemCraft3.Toast, ManaMetalMod.Ham}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodCheeseSandwich, 1), new Object[]{ ItemCraft3.Toast, ItemCraft3.Toast, ItemCraft3.Toast, ManaMetalMod.Cheese}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodCaramelCroissant, 1), new Object[]{ FarmCore.MapleSugar, ItemList.foodCroissant}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodHoneyCroissant, 1), new Object[]{ "dropHoney", ItemList.foodCroissant}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodPineappleCroissant, 1), new Object[]{ FarmCore.Pineapple, ItemList.foodCroissant}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodStrawberryCroissant, 1), new Object[]{ FarmCore.Strawberry, ItemList.foodCroissant}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodEggCroissant, 1), new Object[]{ Items.egg ,ItemList.foodCroissant}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodHamCroissant, 1), new Object[]{ ManaMetalMod.Ham ,ItemList.foodCroissant}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodEggHamCroissant, 1), new Object[]{ Items.egg, ManaMetalMod.Ham ,ItemList.foodCroissant}));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodChickenCroissant, 1), new Object[]{ Items.cooked_chicken ,ItemList.foodCroissant}));
+        GameRegistry.addRecipe(new ItemStack(ItemList.itemWoodenCap, 1), "I I", "# #", "I#I", 'I', Items.iron_ingot, '#', Blocks.planks);
+        GameRegistry.addRecipe(new ItemStack(ItemList.itemBaguetteDough, 1), "I  ", " I ", "  I", 'I', ItemList.itemDough);
+        GameRegistry.addRecipe(new ItemStack(ItemList.itemBaguetteDough, 1), "  I", " I ", "I  ", 'I', ItemList.itemDough);
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.itemDough, 2), "flour", "flour"));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodHamSandwich, 1), ItemCraft3.Toast, ItemCraft3.Toast, ItemCraft3.Toast, ManaMetalMod.Ham));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodCheeseSandwich, 1), ItemCraft3.Toast, ItemCraft3.Toast, ItemCraft3.Toast, ManaMetalMod.Cheese));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodCaramelCroissant, 1), FarmCore.MapleSugar, ItemList.foodCroissant));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodHoneyCroissant, 1), "dropHoney", ItemList.foodCroissant));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodPineappleCroissant, 1), FarmCore.Pineapple, ItemList.foodCroissant));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodStrawberryCroissant, 1), FarmCore.Strawberry, ItemList.foodCroissant));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodEggCroissant, 1), Items.egg, ItemList.foodCroissant));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodHamCroissant, 1), ManaMetalMod.Ham, ItemList.foodCroissant));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodEggHamCroissant, 1), Items.egg, ManaMetalMod.Ham, ItemList.foodCroissant));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodChickenCroissant, 1), Items.cooked_chicken, ItemList.foodCroissant));
 
         /* Smelting. */
         GameRegistry.addSmelting(ItemList.itemDough, new ItemStack(ItemList.foodCroissant), 0.3f);
@@ -87,7 +86,7 @@ public class Recipes {
         ManaMetalAPI.FoodBakingRecipeList.add(new RecipeOre(new ItemStackOre("dropHoney"), new ItemStackOre("listAllmilk"), new ItemStack(ItemList.foodHoneyMilk)));
 
         //* Fermentation *//
-        ManaMetalAPI.FoodFermentationRecipeList.add(new RecipeOre(new ItemStackOre("itemDryTea"), new ItemStackOre("itemDryTea"),new ItemStack(ItemList.itemFermentedTea, 2)));
+        ManaMetalAPI.FoodFermentationRecipeList.add(new RecipeOre(new ItemStackOre("itemDryTea"), new ItemStackOre("itemDryTea"), new ItemStack(ItemList.itemFermentedTea, 2)));
         ManaMetalAPI.FoodJuiceRecipeList.add(new RecipeOre(new ItemStackOre(ItemList.itemFermentedTea), new ItemStackOre(CuisineCore.itemTeaCup), new ItemStack(ItemList.foodWhiteTea)));
         ManaMetalAPI.FoodJuiceRecipeList.add(new RecipeOre(new ItemStackOre(ItemCraft10.fruitTree3), new ItemStackOre(ItemCraft10.fruitTree3), new ItemStack(ItemList.foodPeachPreserves)));
         ManaMetalAPI.FoodJuiceRecipeList.add(new RecipeOre(new ItemStackOre(FarmCore.Pineapple), new ItemStackOre(FarmCore.Pineapple), new ItemStack(ItemList.foodPineapplePreserves)));
@@ -101,11 +100,14 @@ public class Recipes {
         // ManaMetalAPI.FoodKilnRecipeList.add(new RecipeOre(new ItemStackOre(ItemList.itemDough), new ItemStack(ItemList.foodCroissant)));
         // ManaMetalAPI.FoodKilnRecipeList.add(new RecipeOre(new ItemStackOre(ItemList.itemBaguetteDough), new ItemStack(ItemList.foodBaguette)));
 
+        //* Injection *//
+        ManaMetalAPI.ManaMetalInjectionRecipeList.add(new ItemStack[]{new ItemStack(ItemList.foodMocha), new ItemStack(ItemList.foodLatte), new ItemStack(ItemList.foodVanillaCoffee), new ItemStack(ItemList.foodMacchiato), new ItemStack(ItemList.foodEggCoffee), new ItemStack(ItemList.foodCookieCreamCoffee), new ItemStack(ItemList.foodStrawberryCoffee), new ItemStack(ItemList.foodPineappleCoffee), new ItemStack(ItemList.foodEnderCoffee), new ItemStack(ItemList.foodLegendCoffee)});
+        ManaMetalAPI.ManaMetalInjectionRecipeList.add(new ItemStack[]{new ItemStack(ItemList.foodHerdTea), new ItemStack(ItemList.foodMapleSugarMilkTea), new ItemStack(ItemList.foodIcedTea), new ItemStack(ItemList.foodMintTea), new ItemStack(ItemList.foodMilkTea), new ItemStack(ItemList.foodWhiteTea), new ItemStack(ItemList.foodStrawberryTea), new ItemStack(ItemList.foodPineappleTea), new ItemStack(ItemList.foodRedTea), new ItemStack(ItemList.foodLegendTea)});
 
-        if(WithCoffee.FoodPlusMod) {
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodBaconSandwich, 1), new Object[]{ ItemCraft3.Toast, ItemCraft3.Toast, ItemCraft3.Toast, FoodPlusItems.CookedBacon}));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodWalnutCroissant, 1), new Object[]{ FoodPlusItems.Walnut ,ItemList.foodCroissant}));
-            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodHotDogCroissant, 1), new Object[]{ FoodPlusItems.Sausage ,ItemList.foodCroissant}));
+        if (WithCoffee.FoodPlusMod) {
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodBaconSandwich), ItemCraft3.Toast, ItemCraft3.Toast, ItemCraft3.Toast, FoodPlusItems.CookedBacon));
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodWalnutCroissant), FoodPlusItems.Walnut, ItemList.foodCroissant));
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ItemList.foodHotDogCroissant), FoodPlusItems.Sausage, ItemList.foodCroissant));
 
             ManaMetalAPI.FoodJuiceRecipeList.add(new RecipeOre(new ItemStackOre(FoodPlusItems.IceCube), new ItemStackOre(CuisineCore.foodCoffee), new ItemStack(ItemList.foodIcedCoffee)));
             ManaMetalAPI.FoodJuiceRecipeList.add(new RecipeOre(new ItemStackOre(FoodPlusItems.IceCube), new ItemStackOre(ItemList.foodMintTea), new ItemStack(ItemList.foodIcedTea)));

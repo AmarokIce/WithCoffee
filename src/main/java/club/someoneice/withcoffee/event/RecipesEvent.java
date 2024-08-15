@@ -8,8 +8,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import project.studio.manametalmod.produce.cuisine.CuisineCore;
 
-public class RecipesEvent{
-    public RecipesEvent() { }
+public class RecipesEvent {
+    public RecipesEvent() {
+    }
 
     @SubscribeEvent
     public void onCrafting(PlayerEvent.ItemCraftedEvent event) {

@@ -1,4 +1,4 @@
-package club.someoneice.withcoffee.util.core;
+package club.someoneice.withcoffee.util.bean;
 
 import club.someoneice.withcoffee.WithCoffee;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -12,8 +12,8 @@ public class ItemItems extends Item {
         this.setMaxStackSize(setMaxStackSize);
 
         this.setCreativeTab(WithCoffee.Pineapple);
-        this.setTextureName(WithCoffee.MODID + ":" +name);
-        GameRegistry.registerItem(this, name, WithCoffee.MODID);
+        this.setTextureName(WithCoffee.MODID + ":" + name);
+        GameRegistry.registerItem(this, name);
     }
 
     public ItemItems(String name) {

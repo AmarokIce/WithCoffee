@@ -3,7 +3,6 @@ package club.someoneice.withcoffee.util;
 import club.someoneice.withcoffee.WithCoffee;
 import club.someoneice.withcoffee.init.ItemList;
 import com.foodplus.core.FoodPlusItems;
-
 import net.minecraft.init.Items;
 import net.minecraftforge.oredict.OreDictionary;
 import project.studio.manametalmod.ManaMetalAPI;
@@ -15,7 +14,7 @@ public class OreHelper {
         OreDictionary.registerOre("foodCream", ItemList.foodCoffeeCream);
         OreDictionary.registerOre("itemDryTea", ItemList.itemDryTea);
         OreDictionary.registerOre("flourCoffee", ItemList.itemCoffeeFlour);
-        
+
         OreDictionary.registerOre("foodCake", ManaMetalMod.smallcake);
         OreDictionary.registerOre("foodCake", Items.cake);
 
